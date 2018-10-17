@@ -15,11 +15,11 @@ export default [{
   meta: {
     auth: 'admin',
   },
-  redirect: {name: 'Usuarios'},
+  redirect: {name: 'AdminUsuarios'},
   children: [
     {
       path: 'usuarios',
-      name: 'AdminUsuario',
+      name: 'AdminUsuarios',
       component: { template: '<router-view></router-view>' },
       redirect: {name: 'IndexUsuario'},
       children: [

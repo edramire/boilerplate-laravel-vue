@@ -1396,7 +1396,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
   },
   data: function data() {
     return {
-      opciones: [{ label: 'Usuarios', name: 'AdminUsuario', ico: 'fa-users' }, { label: 'Roles', name: 'AdminRoles', ico: 'fa-globe' }]
+      opciones: [{ label: 'Usuarios', name: 'AdminUsuarios', ico: 'fa-users' }, { label: 'Roles', name: 'AdminRoles', ico: 'fa-globe' }]
     };
   }
 });
@@ -10516,10 +10516,7 @@ var render = function() {
             [
               _c(
                 "router-link",
-                {
-                  staticClass: "home-link",
-                  attrs: { to: { name: "Proyectos" } }
-                },
+                { staticClass: "home-link", attrs: { to: { name: "Public" } } },
                 [_c("i", { staticClass: "fa fa-home" })]
               )
             ],
@@ -12530,10 +12527,10 @@ var EventBus = new __WEBPACK_IMPORTED_MODULE_0_vue___default.a();
   meta: {
     auth: 'admin'
   },
-  redirect: { name: 'Usuarios' },
+  redirect: { name: 'AdminUsuarios' },
   children: [{
     path: 'usuarios',
-    name: 'AdminUsuario',
+    name: 'AdminUsuarios',
     component: { template: '<router-view></router-view>' },
     redirect: { name: 'IndexUsuario' },
     children: [{
@@ -12617,7 +12614,7 @@ var EventBus = new __WEBPACK_IMPORTED_MODULE_0_vue___default.a();
   component: __WEBPACK_IMPORTED_MODULE_1__views_layouts_Home_vue___default.a,
   name: 'Home',
   children: [].concat(__WEBPACK_IMPORTED_MODULE_3__routes_admin_routes__["a" /* default */]).concat(__WEBPACK_IMPORTED_MODULE_4__routes_public_routes__["a" /* default */]),
-  redirect: { name: 'AdminUsuario' }
+  redirect: { name: 'Administración' }
 }, {
   path: '/404',
   component: __WEBPACK_IMPORTED_MODULE_0__views_404_vue___default.a,

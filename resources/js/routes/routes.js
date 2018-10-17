@@ -15,7 +15,7 @@ export default [{
   component: Home,
   name: 'Home',
   children: [].concat(adminRoutes).concat(publicRoutes),
-  redirect: {name: 'AdminUsuario'}
+  redirect: {name: 'Administración'}
 },{
   path: '/404',
   component: NotFound,

@@ -17,7 +17,7 @@ export default {
   data() {
     return {
       opciones: [
-        {label:'Usuarios', name:'AdminUsuario', ico:'fa-users'},
+        {label:'Usuarios', name:'AdminUsuarios', ico:'fa-users'},
         {label:'Roles', name:'AdminRoles', ico:'fa-globe'},
       ],
     }

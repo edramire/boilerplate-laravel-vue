@@ -5,7 +5,7 @@
     </el-col>
     <el-col :span="14" class="pull-right">
       <el-button class="transparent-button header-button-menu">
-        <router-link class="home-link" :to="{name: 'Proyectos'}">
+        <router-link class="home-link" :to="{name: 'Public'}">
           <i class="fa fa-home"></i>
         </router-link>
       </el-button>
