@@ -4,9 +4,9 @@
       <el-col :span="20">
         <h2>{{operacion}} roles</h2>
       </el-col>
-      <el-col :span="4">
+      <el-col :span="4" class="button-wrapper">
         <router-link :to="{name: 'IndexRoles'}">
-          <el-button type="primary">Atrás</el-button>
+          <el-button type="success">Atrás</el-button>
         </router-link>
       </el-col>
     </template>

@@ -1744,7 +1744,6 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 
     __WEBPACK_IMPORTED_MODULE_1__endpoints_users__["a" /* default */].show({ id: this.$route.params.id }).then(function (res) {
       _this.user = res.data;
-      _this.user.servicios = _this.user.servicios[0];
     }).catch(function (error) {
       console.error(error.response.data.message);
     });
@@ -1838,15 +1837,8 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
         _this.roles = res.data.data;
       });
     },
-    loadEstablecimientos: function loadEstablecimientos() {
-      var _this2 = this;
-
-      return EstablecimientosResources.all().then(function (res) {
-        _this2.establecimientos = res.data;
-      });
-    },
     submitForm: function submitForm() {
-      var _this3 = this;
+      var _this2 = this;
 
       this.errors.clear();
       this.loading = true;
@@ -1857,7 +1849,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
         submit = __WEBPACK_IMPORTED_MODULE_1__endpoints_users__["a" /* default */].edit(this.user);
       }
       submit.then(this.submitSuccess).catch(this.submitError).finally(function () {
-        _this3.loading = false;
+        _this2.loading = false;
       });
     },
     submitSuccess: function submitSuccess(response) {
@@ -1875,7 +1867,6 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
   },
   created: function created() {
     this.loadRoles();
-    this.loadServicios();
   }
 });
 
@@ -6282,6 +6273,21 @@ exports.push([module.i, "\nbody {\n  margin: 0px;\n  padding: 0px;\n  /*backgrou
 
 /***/ }),
 
+/***/ "./node_modules/css-loader/index.js!./node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-dd2b2b04\",\"scoped\":false,\"hasInlineConfig\":true}!./node_modules/vue-loader/lib/selector.js?type=styles&index=0!./resources/js/views/admin/Home.vue":
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__("./node_modules/css-loader/lib/css-base.js")(false);
+// imports
+
+
+// module
+exports.push([module.i, "\n.body-mantenedor {\n  padding-bottom:30px;\n}\n.pagination-mantenedor {\n  text-align: center;\n}\n.loading-modulos {\n  min-height: 420px;\n  width: 100%;\n}\n.el-table .cell {\n  word-break: normal;\n}\n.button-wrapper {\n  text-align: right;\n}\n", ""]);
+
+// exports
+
+
+/***/ }),
+
 /***/ "./node_modules/css-loader/index.js!./node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-fdfb940e\",\"scoped\":true,\"hasInlineConfig\":true}!./node_modules/sass-loader/lib/loader.js?indentedSyntax!./node_modules/vue-loader/lib/selector.js?type=styles&index=0!./resources/js/components/TabMenu.vue":
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -9695,13 +9701,13 @@ var render = function() {
           _vm._v(" "),
           _c(
             "el-col",
-            { attrs: { span: 4 } },
+            { staticClass: "button-wrapper", attrs: { span: 4 } },
             [
               _c(
                 "router-link",
                 { attrs: { to: { name: "IndexRoles" } } },
                 [
-                  _c("el-button", { attrs: { type: "primary" } }, [
+                  _c("el-button", { attrs: { type: "success" } }, [
                     _vm._v("Atrás")
                   ])
                 ],
@@ -10235,13 +10241,13 @@ var render = function() {
           _vm._v(" "),
           _c(
             "el-col",
-            { attrs: { span: 4 } },
+            { staticClass: "button-wrapper", attrs: { span: 4 } },
             [
               _c(
                 "router-link",
                 { attrs: { to: { name: "IndexUsuario" } } },
                 [
-                  _c("el-button", { attrs: { type: "primary" } }, [
+                  _c("el-button", { attrs: { type: "success" } }, [
                     _vm._v("Atrás")
                   ])
                 ],
@@ -11870,6 +11876,33 @@ if(false) {
 
 /***/ }),
 
+/***/ "./node_modules/vue-style-loader/index.js!./node_modules/css-loader/index.js!./node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-dd2b2b04\",\"scoped\":false,\"hasInlineConfig\":true}!./node_modules/vue-loader/lib/selector.js?type=styles&index=0!./resources/js/views/admin/Home.vue":
+/***/ (function(module, exports, __webpack_require__) {
+
+// style-loader: Adds some css to the DOM by adding a <style> tag
+
+// load the styles
+var content = __webpack_require__("./node_modules/css-loader/index.js!./node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-dd2b2b04\",\"scoped\":false,\"hasInlineConfig\":true}!./node_modules/vue-loader/lib/selector.js?type=styles&index=0!./resources/js/views/admin/Home.vue");
+if(typeof content === 'string') content = [[module.i, content, '']];
+if(content.locals) module.exports = content.locals;
+// add the styles to the DOM
+var update = __webpack_require__("./node_modules/vue-style-loader/lib/addStylesClient.js")("4483df52", content, false, {});
+// Hot Module Replacement
+if(false) {
+ // When the styles change, update the <style> tags
+ if(!content.locals) {
+   module.hot.accept("!!../../../../node_modules/css-loader/index.js!../../../../node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-dd2b2b04\",\"scoped\":false,\"hasInlineConfig\":true}!../../../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./Home.vue", function() {
+     var newContent = require("!!../../../../node_modules/css-loader/index.js!../../../../node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-dd2b2b04\",\"scoped\":false,\"hasInlineConfig\":true}!../../../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./Home.vue");
+     if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
+     update(newContent);
+   });
+ }
+ // When the module is disposed, remove the <style> tags
+ module.hot.dispose(function() { update(); });
+}
+
+/***/ }),
+
 /***/ "./node_modules/vue-style-loader/index.js!./node_modules/css-loader/index.js!./node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-fdfb940e\",\"scoped\":true,\"hasInlineConfig\":true}!./node_modules/sass-loader/lib/loader.js?indentedSyntax!./node_modules/vue-loader/lib/selector.js?type=styles&index=0!./resources/js/components/TabMenu.vue":
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -12614,7 +12647,7 @@ var EventBus = new __WEBPACK_IMPORTED_MODULE_0_vue___default.a();
   component: __WEBPACK_IMPORTED_MODULE_1__views_layouts_Home_vue___default.a,
   name: 'Home',
   children: [].concat(__WEBPACK_IMPORTED_MODULE_3__routes_admin_routes__["a" /* default */]).concat(__WEBPACK_IMPORTED_MODULE_4__routes_public_routes__["a" /* default */]),
-  redirect: { name: 'Administración' }
+  redirect: { name: 'AdminUsuarios' }
 }, {
   path: '/404',
   component: __WEBPACK_IMPORTED_MODULE_0__views_404_vue___default.a,
@@ -12888,6 +12921,10 @@ module.exports = Component.exports
 /***/ (function(module, exports, __webpack_require__) {
 
 var disposed = false
+function injectStyle (ssrContext) {
+  if (disposed) return
+  __webpack_require__("./node_modules/vue-style-loader/index.js!./node_modules/css-loader/index.js!./node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-dd2b2b04\",\"scoped\":false,\"hasInlineConfig\":true}!./node_modules/vue-loader/lib/selector.js?type=styles&index=0!./resources/js/views/admin/Home.vue")
+}
 var normalizeComponent = __webpack_require__("./node_modules/vue-loader/lib/component-normalizer.js")
 /* script */
 var __vue_script__ = __webpack_require__("./node_modules/babel-loader/lib/index.js?{\"cacheDirectory\":true,\"presets\":[[\"env\",{\"modules\":false,\"targets\":{\"browsers\":[\"> 2%\"],\"uglify\":true}}]],\"plugins\":[\"transform-object-rest-spread\",[\"transform-runtime\",{\"polyfill\":false,\"helpers\":false}]]}!./node_modules/vue-loader/lib/selector.js?type=script&index=0!./resources/js/views/admin/Home.vue")
@@ -12896,7 +12933,7 @@ var __vue_template__ = __webpack_require__("./node_modules/vue-loader/lib/templa
 /* template functional */
 var __vue_template_functional__ = false
 /* styles */
-var __vue_styles__ = null
+var __vue_styles__ = injectStyle
 /* scopeId */
 var __vue_scopeId__ = null
 /* moduleIdentifier (server only) */

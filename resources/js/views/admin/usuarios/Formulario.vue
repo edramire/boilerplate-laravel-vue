@@ -4,9 +4,9 @@
       <el-col :span="20">
         <h2>{{operacion}} usuarios</h2>
       </el-col>
-      <el-col :span="4">
+      <el-col :span="4" class="button-wrapper">
         <router-link :to="{name: 'IndexUsuario'}">
-          <el-button type="primary">Atrás</el-button>
+          <el-button type="success">Atrás</el-button>
         </router-link>
       </el-col>
     </template>
@@ -74,11 +74,6 @@ export default {
         this.roles = res.data.data;
       })
     },
-    loadEstablecimientos() {
-      return EstablecimientosResources.all().then((res) => {
-        this.establecimientos = res.data;
-      });
-    },
     submitForm() {
       this.errors.clear()
       this.loading = true;
@@ -107,7 +102,6 @@ export default {
   },
   created() {
     this.loadRoles();
-    this.loadServicios();
   }
 }
 </script>

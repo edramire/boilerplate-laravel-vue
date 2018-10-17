@@ -24,3 +24,23 @@ export default {
   },
 }
 </script>
+
+
+<style>
+.body-mantenedor {
+  padding-bottom:30px;
+}
+.pagination-mantenedor {
+  text-align: center;
+}
+.loading-modulos {
+  min-height: 420px;
+  width: 100%;
+}
+.el-table .cell {
+  word-break: normal;
+}
+.button-wrapper {
+  text-align: right;
+}
+</style>

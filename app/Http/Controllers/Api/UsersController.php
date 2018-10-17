@@ -32,7 +32,7 @@ class UsersController extends ApiController
 
     public function show(User $user)
     {
-        $user->load(['establecimientos', 'servicios', 'roles']);
+        $user->load('roles');
         $user->role_id = $user->roles[0]->id;
         return $user;
     }

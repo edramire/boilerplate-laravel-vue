@@ -18,7 +18,6 @@ export default {
     UsersResources.show({id: this.$route.params.id})
       .then((res) => {
         this.user = res.data;
-        this.user.servicios = this.user.servicios[0];
       })
       .catch((error) => {
         console.error(error.response.data.message);
